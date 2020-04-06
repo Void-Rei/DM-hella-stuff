@@ -1,0 +1,36 @@
+//Вычитание целых чисел
+DM_Z SUB_ZZ_Z(DM_Z minuend, DM_Z subtrahend)
+{
+    DM_Z result;
+
+    if (COM_NN_D(ABS_Z_N(minuend), ABS_NN_D(subtrahend)) == 0) //Проверили числа на равенство
+    {
+        if (POZ_Z_D(minuend) == POZ_Z_D(subtrahend)) //Числа равны по модулю
+        {                                                                      //Знаки одинаковы
+            result.b = 0; //Знак разности "+"
+            result.n = 0; //Номер старшей позиции разности
+            result.a = new unsigned short [1] ; //Выделение памяти
+            result.a[0] = 0; //Разность равна нулю
+        }
+        else
+        {                                                                      //Знаки разные
+            result.a = ADD_NN_N(ABS_Z_N(minuend), ABS_Z_N(subtrahend)); //Сложение модулей натуральных чисел
+            result.b = minuend.b; //Знак разности равен знаку уменьшанмого
+
+        }
+    }
+    else
+    {                                                                         //Числа не равны
+        if (POZ_Z_D(minuend) == POZ_Z_D(subtrahend)) //Знаки совпадают
+        {
+            result.a = SUB_NN_N(ABS_Z_N(minuend), ABS_Z_N(subtrahend)); //Вычитание из первого большего натурального числа второго меньшего натурального
+            if (POZ_Z_D(minuend) == 1)
+                result.b = 0; //Знак разности "+"
+            else
+                result.b = 1; //Знак разности "-"
+        }
+    }
+    return result; //Возвращаем результат
+}
+//Возвращаемое значение: целое число
+//Параметры: minuend - уменьшаемое целое число, subtrahend - вычитаемое целое число.
