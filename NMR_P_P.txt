@@ -1,0 +1,11 @@
+//Маслов К.Д. 9309
+DM_P DM_P::NMR_P_P()
+{
+	DM_P NOD_P, NOD_M, derivative, M, answer; 
+	detriative = DER_P_P(t); 	//находим производную многочлена
+	NOD_P = this.GCF_PP_P(detriative);	//находим НОД многочлена и его производной
+	M = t / NOD_P; 	//находим отношения многочлена к НОД 
+	NOD_M = M.GCF_PP_P(NOD_P); 	//находим НОД отношения М и НОД
+	answer = M / NOD_M; 	//получаем ответ путем деления М на НОД
+	return answer;
+}

@@ -1,0 +1,18 @@
+//Маслов К.Д. 9309 
+
+unsigned short DEG_P_N(DM_P *P) // Степень многочлена
+{
+	unsigned short d = (*P).m;
+
+	for (int i = (*P).m; i > 1; i--)	//Если первые коэффициенты являются 0 то уменьшаем степень
+
+		if (*P).c[i] != 0 then
+
+			return d;
+
+		else
+
+			d--;
+
+	return d;
+}
