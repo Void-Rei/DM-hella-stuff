@@ -142,8 +142,8 @@ void MUL_NN_N(DM_N n1, DM_N n2)					// умножение натуральног
 
 	for (int i = 0; i < qq.l; i++)
 	{
-		qq.n[i + 1] += c[i] / 10;
-		c[i] %= 10;
+		qq.n[i + 1] += qq.n[i] / 10;
+		qq.n[i] %= 10;
 	}
 
 	while (qq.n[qq.l] == 0)
