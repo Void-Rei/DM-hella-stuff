@@ -1,11 +1,11 @@
-//натуральное число
+//РЅР°С‚СѓСЂР°Р»СЊРЅРѕРµ С‡РёСЃР»Рѕ
 #ifndef DM_N_H
 #define DM_N_H
 
 struct DM_N
 {
-	unsighned short *n; // указатель на массив цифр
-	unsighned short l; //длинна числа
+	unsighned short *n; // СѓРєР°Р·Р°С‚РµР»СЊ РЅР° РјР°СЃСЃРёРІ С†РёС„СЂ
+	unsighned short l; // РєРѕР»-РІРѕ С†РёС„СЂ
 }
 
 #endif
