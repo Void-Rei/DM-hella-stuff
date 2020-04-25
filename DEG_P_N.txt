@@ -1,18 +1,17 @@
 //Маслов К.Д. 9309 
 
-unsigned long long DEG_P_N(DM_P *P) // Степень многочлена
+unsigned short DEG_P_N(struct DM_P& M) // Степень многочлена
 {
-	unsigned long long d = (*P).m;
+	unsigned short d = M.m;
 
-	for (long long i = (*P).m; i > 1; i--)	//Если первые коэффициенты являются 0 то уменьшаем степень
-
-		if (*P).c[i] != 0 then
-
+	for (int i = M.m; i > 1; i--)	//Если первые коэффициенты являются 0 то уменьшаем степень
+	{
+		if (M.n != 0)
+		{
 			return d;
-
-		else
-
-			d--;
+		}
+		else d--;
+	}
 
 	return d;
 }
